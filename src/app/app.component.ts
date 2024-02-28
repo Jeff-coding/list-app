@@ -16,6 +16,6 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.service.getListItem(10);
+    this.service.getListItem(30);
   }
 }

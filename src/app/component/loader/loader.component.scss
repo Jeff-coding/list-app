@@ -1,78 +1,78 @@
 .gb__loader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 99;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #fff;
-    transition: all 0.15s ease-in-out;
-    opacity: 0;
-    visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  transition: all 0.15s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
 
-    &.show {
-        visibility: visible;
-        opacity: 1;
-        z-index: 100;
-    }
+  &.show {
+      visibility: visible;
+      opacity: 1;
+      z-index: 100;
+  }
 
-    &-anim {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        max-width: 6rem;
-        margin-top: 3rem;
-        margin-right: auto;
-        margin-bottom: 5rem;
-        margin-left: auto;
-    }
+  &-anim {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      max-width: 6rem;
+      margin-top: 3rem;
+      margin-right: auto;
+      margin-bottom: 5rem;
+      margin-left: auto;
+  }
 
-    &-anim:before,
-    &-anim:after {
-        content: "";
-        position: absolute;
-        border-radius: 50%;
-        animation: pulsOut 1.8s ease-in-out infinite;
-        filter: drop-shadow(0 0 1rem rgba(29, 78, 216, 0.75));
-    }
+  &-anim:before,
+  &-anim:after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      animation: pulsOut 1.8s ease-in-out infinite;
+      filter: drop-shadow(0 0 1rem rgba(29, 78, 216, 0.75));
+  }
 
-    &-anim:before {
-        width: 100%;
-        padding-bottom: 100%;
-        box-shadow: inset 0 0 0 1rem var(--bs-primary);
-        animation-name: pulsIn;
-    }
+  &-anim:before {
+      width: 100%;
+      padding-bottom: 100%;
+      box-shadow: inset 0 0 0 1rem var(--bs-primary);
+      animation-name: pulsIn;
+  }
 
-    &-anim:after {
-        width: calc(100% - 2rem);
-        padding-bottom: calc(100% - 2rem);
-        box-shadow: 0 0 0 0 var(--bs-primary);
-    }   
+  &-anim:after {
+      width: calc(100% - 2rem);
+      padding-bottom: calc(100% - 2rem);
+      box-shadow: 0 0 0 0 var(--bs-primary);
+  }
 }
 
 @keyframes pulsIn {
-    0% {
-        box-shadow: inset 0 0 0 1rem var(--bs-primary);
-        opacity: 1;
-    }
-    50%, 100% {
-        box-shadow: inset 0 0 0 0 var(--bs-primary);
-        opacity: 0;
-    }
-    }
+  0% {
+      box-shadow: inset 0 0 0 1rem var(--bs-primary);
+      opacity: 1;
+  }
+  50%, 100% {
+      box-shadow: inset 0 0 0 0 var(--bs-primary);
+      opacity: 0;
+  }
+  }
 
-    @keyframes pulsOut {
-    0%, 50% {
-        box-shadow: 0 0 0 0 var(--bs-primary);
-        opacity: 0;
-    }
-    100% {
-        box-shadow: 0 0 0 1rem var(--bs-primary);
-        opacity: 1;
-    }
+  @keyframes pulsOut {
+  0%, 50% {
+      box-shadow: 0 0 0 0 var(--bs-primary);
+      opacity: 0;
+  }
+  100% {
+      box-shadow: 0 0 0 1rem var(--bs-primary);
+      opacity: 1;
+  }
 }
