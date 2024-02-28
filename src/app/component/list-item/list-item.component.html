@@ -1,0 +1,6 @@
+<ul class="list-group pt-5">
+  <li *ngFor="let item of data" class="list-group-item p-4">
+    <h5 class="mb-2">Flight number: {{ item.flight_number }} {{ item.name }} ({{ item.date_utc | date: 'longDate' }})</h5>
+    <p class="m-0 text-truncate">{{item.details}}</p>
+  </li>
+</ul>
